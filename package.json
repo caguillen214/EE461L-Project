@@ -1,5 +1,5 @@
 {
-  "name": "spec-builder",
+  "name": "Markdown-Maker",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andrew-templeton/spec-builder.git"
+    "url": "git+https://github.com/caguillen214/EE461L-Project"
   },
   "author": "Carlos A. Guillen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andrew-templeton/spec-builder/issues"
+    "url": "https://github.com/caguillen214/EE461L-Project"
   },
-  "homepage": "https://github.com/andrew-templeton/spec-builder#readme",
+  "homepage": "https://github.com/caguillen214/EE461L-Project",
   "dependencies": {
     "body-parser": "^1.13.1",
     "express": "^4.12.4"

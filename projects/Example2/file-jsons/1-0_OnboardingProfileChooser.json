@@ -1,0 +1,16 @@
+{
+  "Name": "1-0_OnboardingProfileChooser",
+  "URL": "./projects/Example2/file-images/1-0_OnboardingProfileChooser.png",
+  "Purpose": "",
+  "Transitions": {
+    "Build Ins": {},
+    "Build Outs": {}
+  },
+  "Data": {
+    "input": [],
+    "output": [],
+    "asset": []
+  },
+  "action": [],
+  "navigation": []
+}

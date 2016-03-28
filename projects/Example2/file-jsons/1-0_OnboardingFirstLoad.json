@@ -1,0 +1,77 @@
+{
+  "Name": "1-0_OnboardingFirstLoad",
+  "URL": "projects/example/file-images/1-0_OnboardingFirstLoad.png",
+  "Purpose": "Sign-up screen for users!",
+  "Transitions": {
+    "Build Ins": {},
+    "Build Outs": {}
+  },
+  "Data": {
+    "input": [
+      {
+        "type": "Text",
+        "restrictions": {
+          "Exact Text": null,
+          "Uppercase Only": null,
+          "Lowercase Only": null,
+          "Mixed Case": true,
+          "Alphabetic": true,
+          "Alphanumeric": null,
+          "Alphanumeric + Symbols": null,
+          "Symbols Only": null,
+          "Title Case": null,
+          "Regular Expression": null
+        },
+        "key": "FirstName"
+      },
+      {
+        "type": "Text",
+        "restrictions": {
+          "Exact Text": null,
+          "Uppercase Only": null,
+          "Lowercase Only": null,
+          "Mixed Case": true,
+          "Alphabetic": true,
+          "Alphanumeric": null,
+          "Alphanumeric + Symbols": null,
+          "Symbols Only": null,
+          "Title Case": null,
+          "Regular Expression": null
+        },
+        "key": "LastName"
+      },
+      {
+        "type": "Button",
+        "key": "GetStarted"
+      },
+      {
+        "type": "Email",
+        "key": "Email"
+      }
+    ],
+    "output": [
+      {
+        "key": "GetStartedSucces",
+        "typeOut": "Pop-Up",
+        "desc": "Shows successful entry of inputs"
+      }
+    ],
+    "asset": []
+  },
+  "action": [
+    {
+      "action": "Tap",
+      "object": "GetStarted",
+      "result": "GetStartedSucces",
+      "key": "act TapGetStarted"
+    }
+  ],
+  "navigation": [
+    {
+      "action": "Tap",
+      "object": "GetStarted",
+      "result": "1-0_OnboardingProfileChooser",
+      "key": "navTapGetStarted"
+    }
+  ]
+}

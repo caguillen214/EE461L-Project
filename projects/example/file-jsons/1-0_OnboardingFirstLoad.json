@@ -1,0 +1,27 @@
+{
+  "Name": "1-0_OnboardingFirstLoad",
+  "URL": "projects/example/file-images/1-0_OnboardingFirstLoad.png",
+  "Purpose": "Sign-up screen for users",
+  "Transitions": {
+    "Build Ins": {},
+    "Build Outs": {}
+  },
+  "Data": {
+    "input": [
+      {
+        "type": "Button",
+        "key": "asdf"
+      }
+    ],
+    "output": [
+      {
+        "key": "asdf234",
+        "typeOut": "Animation",
+        "desc": "asdf"
+      }
+    ],
+    "asset": []
+  },
+  "action": [],
+  "navigation": []
+}

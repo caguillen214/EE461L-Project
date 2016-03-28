@@ -1,0 +1,16 @@
+{
+  "Name": "pls",
+  "URL": "./projects/example/file-images/pls.png",
+  "Purpose": "asdf",
+  "Transitions": {
+    "Build Ins": {},
+    "Build Outs": {}
+  },
+  "Data": {
+    "input": [],
+    "output": [],
+    "asset": []
+  },
+  "action": [],
+  "navigation": []
+}

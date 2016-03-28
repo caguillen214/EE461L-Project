@@ -1,4 +1,4 @@
-angular.module('atTuple', ['ngRoute', 'atMain'])
+angular.module('mdMaker', ['ngRoute', 'atMain'])
   .config(['$routeProvider',function($routeProvider) {
     $routeProvider.
       when('/:project?/:file?', {
