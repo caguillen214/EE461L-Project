@@ -19,6 +19,10 @@
   "homepage": "https://github.com/caguillen214/EE461L-Project",
   "dependencies": {
     "body-parser": "^1.13.1",
-    "express": "^4.12.4"
+    "express": "^4.12.4",
+  },
+  "devDependencies": {
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-jasmine": "^0.3.8"
   }
 }
