@@ -58,7 +58,6 @@ angular.module('atMain')
       }
       return $sce.trustAsHtml(html);
     };
-
     $scope.titleCase = function(text) {
       return text.charAt(0).toUpperCase()+text.substring(1);
     };
@@ -75,6 +74,7 @@ angular.module('atMain')
       $scope.showImage = !$scope.showImage;
     }
 
+
     $scope.confirmDelete = function() {
       if($window.confirm('Are you sure you want to delete this file? This action cannot be undone.')) { 
         atServer.deleteFile($scope.project,$scope.fileName || $scope.doc.Name);
@@ -82,7 +82,7 @@ angular.module('atMain')
       }
     }
 
-    $scope.getBuildAssets = function() {
+    $scope.getBuildAssets = function(project) {
       return atServer.getBuildAssets(project);
     }
     
@@ -93,6 +93,50 @@ angular.module('atMain')
       atDirApi.setFileName(project,file);
       $scope.fileName = file;
     }
+
+    function testSuit(){
+      //test titleCase
+      txt = "teststring";
+      console.log("Test titleCase(): " + ("Teststring" == $scope.titleCase(txt)));
+
+      //test getFileNames
+      proj = "Example2";
+      $scope.getFileNames(proj).then(function(res){
+          expected = ["1-0_OnboardingFirstLoad", "1-0_OnboardingProfileChooser"]
+          console.log("Test getFileNames(): "+ (expected.toString() == res.toString()))
+      })
+      
+
+      //test getFileImages
+      proj = "Example2";
+      $scope.getFileImages(proj).then(function(res){
+          expected = ["1-0_OnboardingFirstLoad.png", "1-0_OnboardingProfileChooser.png"]
+          console.log("Test getFileImages(): "+ (expected.toString() == res.toString()))
+      })
+
+      //test showFunc
+      $scope.showImage = false;
+      $scope.showFunc();
+      console.log("Test showFunc(): " + ($scope.showImage == true))
+
+      //test getBuildAssets
+      proj = "Example2";
+      $scope.getBuildAssets(proj).then(function(res){
+          expected = ["loading.gif"]
+          console.log("Test getBuildAssets(): "+ (expected.toString() == res.toString()))
+      })
+
+      //test setFileName
+      $scope.fileName = "oldfilename"
+      fileName = "newfilename";
+      console.log("File Name Before: "+$scope.fileName)
+      $scope.setFileName(proj,fileName)
+      console.log("Test setFileName(): "+(fileName=="newfilename"))
+
+      
+    }
+    testSuit()
+
 
     $scope.saveFile = function() {
       atDirApi.saveFile($scope.project, $scope.doc.Name , $scope.doc, $scope.created, $scope.temp);
