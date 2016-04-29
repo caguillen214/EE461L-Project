@@ -51,6 +51,7 @@ app.use(function(req, res, next) {
   }
 });
 
+
 app.get('/delete-file', function(req, res){
   fs.unlinkSync('./projects/'+req.query.project+'/file-directives/'+req.query.file+'.json');
   fs.unlinkSync('./projects/'+req.query.project+'/file-jsons/'+req.query.file+'.json');
