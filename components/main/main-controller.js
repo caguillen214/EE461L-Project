@@ -94,48 +94,48 @@ angular.module('atMain')
       $scope.fileName = file;
     }
 
-    function testSuit(){
-      //test titleCase
-      txt = "teststring";
-      console.log("Test titleCase(): " + ("Teststring" == $scope.titleCase(txt)));
+    // function testSuit(){
+    //   //test titleCase
+    //   txt = "teststring";
+    //   console.log("Test titleCase(): " + ("Teststring" == $scope.titleCase(txt)));
 
-      //test getFileNames
-      proj = "Example2";
-      $scope.getFileNames(proj).then(function(res){
-          expected = ["1-0_OnboardingFirstLoad", "1-0_OnboardingProfileChooser"]
-          console.log("Test getFileNames(): "+ (expected.toString() == res.toString()))
-      })
+    //   //test getFileNames
+    //   proj = "Example2";
+    //   $scope.getFileNames(proj).then(function(res){
+    //       expected = ["1-0_OnboardingFirstLoad", "1-0_OnboardingProfileChooser"]
+    //       console.log("Test getFileNames(): "+ (expected.toString() == res.toString()))
+    //   })
       
 
-      //test getFileImages
-      proj = "Example2";
-      $scope.getFileImages(proj).then(function(res){
-          expected = ["1-0_OnboardingFirstLoad.png", "1-0_OnboardingProfileChooser.png"]
-          console.log("Test getFileImages(): "+ (expected.toString() == res.toString()))
-      })
+    //   //test getFileImages
+    //   proj = "Example2";
+    //   $scope.getFileImages(proj).then(function(res){
+    //       expected = ["1-0_OnboardingFirstLoad.png", "1-0_OnboardingProfileChooser.png"]
+    //       console.log("Test getFileImages(): "+ (expected.toString() == res.toString()))
+    //   })
 
-      //test showFunc
-      $scope.showImage = false;
-      $scope.showFunc();
-      console.log("Test showFunc(): " + ($scope.showImage == true))
+    //   //test showFunc
+    //   $scope.showImage = false;
+    //   $scope.showFunc();
+    //   console.log("Test showFunc(): " + ($scope.showImage == true))
 
-      //test getBuildAssets
-      proj = "Example2";
-      $scope.getBuildAssets(proj).then(function(res){
-          expected = ["loading.gif"]
-          console.log("Test getBuildAssets(): "+ (expected.toString() == res.toString()))
-      })
+    //   //test getBuildAssets
+    //   proj = "Example2";
+    //   $scope.getBuildAssets(proj).then(function(res){
+    //       expected = ["loading.gif"]
+    //       console.log("Test getBuildAssets(): "+ (expected.toString() == res.toString()))
+    //   })
 
-      //test setFileName
-      $scope.fileName = "oldfilename"
-      fileName = "newfilename";
-      console.log("File Name Before: "+$scope.fileName)
-      $scope.setFileName(proj,fileName)
-      console.log("Test setFileName(): "+(fileName=="newfilename"))
+    //   //test setFileName
+    //   $scope.fileName = "oldfilename"
+    //   fileName = "newfilename";
+    //   console.log("File Name Before: "+$scope.fileName)
+    //   $scope.setFileName(proj,fileName)
+    //   console.log("Test setFileName(): "+(fileName=="newfilename"))
 
       
-    }
-    testSuit()
+    // }
+    // testSuit()
 
 
     $scope.saveFile = function() {
@@ -143,7 +143,7 @@ angular.module('atMain')
       $location.path('/'+$scope.project+'/'+$scope.fileName || $scope.doc.Name);
     };
     $scope.selectProject = function(project, skipReset) {
-      if(skipReset == true && !$routeParams.file){
+      if(skipReset == false && !$routeParams.file){
         $location.path('/'+project);
       }
       if($scope.project){
@@ -175,7 +175,7 @@ angular.module('atMain')
         atDirApi.readyForRead = true;
         //atDirApi.loadDropDownValues();
       });
-       if(skipReset == true){
+      if(skipReset == false){
         $location.path('/'+$scope.project+'/'+file);
       }
       return file;

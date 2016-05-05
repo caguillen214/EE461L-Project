@@ -1,0 +1,39 @@
+{
+  "Name": "Testing File Creation",
+  "URL": "./projects/example/file-images/Testing File Creation.png",
+  "Purpose": "Another test change for conflicts",
+  "Transitions": {
+    "Build Ins": {},
+    "Build Outs": {}
+  },
+  "Data": {
+    "input": [
+      {
+        "type": "Text",
+        "restrictions": {
+          "Exact Text": null,
+          "Uppercase Only": null,
+          "Lowercase Only": null,
+          "Mixed Case": null,
+          "Alphabetic": null,
+          "Alphanumeric": null,
+          "Alphanumeric + Symbols": true,
+          "Symbols Only": null,
+          "Title Case": null,
+          "Regular Expression": "(\\d|\\w){0..5}"
+        },
+        "key": "INPUTKEY"
+      }
+    ],
+    "output": [
+      {
+        "key": "OUTPUTKEY",
+        "typeOut": "Pop-Up",
+        "desc": "Shows the text inputted"
+      }
+    ],
+    "asset": []
+  },
+  "action": [],
+  "navigation": []
+}

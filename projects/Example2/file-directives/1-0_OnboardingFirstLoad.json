@@ -66,6 +66,11 @@
         "key": "GetStartedSucces",
         "typeOut": "Pop-Up",
         "desc": "Shows successful entry of inputs"
+      },
+      {
+        "key": "EmailError",
+        "typeOut": "Message",
+        "desc": "Says if email failed"
       }
     ],
     "action": [
@@ -87,23 +92,5 @@
     ],
     "build": []
   },
-  "existsHash": {
-    "input": {
-      "FirstName": 0,
-      "LastName": 1,
-      "GetStarted": 2,
-      "Email": 3
-    },
-    "output": {
-      "GetStartedSucces": 0
-    },
-    "action": {
-      "act TapGetStarted": 0
-    },
-    "asset": {},
-    "navigation": {
-      "navTapGetStarted": 0
-    },
-    "build": {}
-  }
+  "existsHash": {}
 }

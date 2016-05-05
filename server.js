@@ -79,7 +79,7 @@ app.get('/get-build-assets', function(req, res){
 
 app.get('/get-projects', function(req, res){
   var dirs = fs.readdirSync('./projects')
-      .filter(function(x) {return x != '.DS_Store'})
+      .filter(function(x) {return x != '.DS_Store' && x != '.git'})
 	res.json(dirs);
 });
 
