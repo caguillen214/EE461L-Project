@@ -1,11 +1,6 @@
 # Markdown Maker
 Markdown Maker is a web-app created to normalize and improve the design/developer production cycle. Through the use of a common GUI, designers are able to wire-frame the look and interactions of every page of an application they are creating. The Markdown Maker creates a page layout in various formats such as Markdown for readability and JSON for extendability so that a developer can quickly and easily get to developing. This tool will cut down the "back and forth" time between developers and designers allowing applications to be rolled out to market and clients faster.
 
-## Build and Run Instructions
-
-Once the repo has been cloned all that is needed to build the project is to run `bower install` and `npm install`.
-
-In order to run and use the app you need to run a local server at the root directory of the project (any local server should work such as [http-server](https://www.npmjs.com/package/http-server)). A seperate node server for the File API also needs to be run from the root directory by running `node server.js`.
 
 ## File Structure
 
