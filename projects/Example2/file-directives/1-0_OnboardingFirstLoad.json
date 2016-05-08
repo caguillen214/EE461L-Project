@@ -59,6 +59,10 @@
       {
         "type": "Email",
         "key": "Email"
+      },
+      {
+        "type": "Button",
+        "key": "Password"
       }
     ],
     "output": [
@@ -71,6 +75,11 @@
         "key": "EmailError",
         "typeOut": "Message",
         "desc": "Says if email failed"
+      },
+      {
+        "key": "PasswordError",
+        "typeOut": "Pop-Up",
+        "desc": "shows error"
       }
     ],
     "action": [

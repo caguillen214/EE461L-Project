@@ -18,6 +18,10 @@
           "Regular Expression": "(\\d|\\w){0..5}"
         },
         "key": "INPUTKEY"
+      },
+      {
+        "type": "Button",
+        "key": "THISWORKS"
       }
     ],
     "output": [
@@ -34,7 +38,8 @@
   },
   "existsHash": {
     "input": {
-      "INPUTKEY": 0
+      "INPUTKEY": 0,
+      "THISWORKS": 1
     },
     "output": {
       "OUTPUTKEY": 0

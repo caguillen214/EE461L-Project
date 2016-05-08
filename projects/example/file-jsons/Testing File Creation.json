@@ -23,6 +23,10 @@
           "Regular Expression": "(\\d|\\w){0..5}"
         },
         "key": "INPUTKEY"
+      },
+      {
+        "type": "Button",
+        "key": "THISWORKS"
       }
     ],
     "output": [

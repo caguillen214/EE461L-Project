@@ -21,7 +21,7 @@ angular.module('atServerService', [])
       if(projectName){
         var res = {};
         var defer = $q.defer();
-        $http.get("http://localhost:3000/get-file-names?project="+projectName)
+        $http.get("http://104.131.4.69:3000/get-file-names?project="+projectName)
           .success(function(data){
             res = data;
             defer.resolve(data);
@@ -34,7 +34,7 @@ angular.module('atServerService', [])
       if(projectName){
         var res = {};
         var defer = $q.defer();
-        $http.get("http://localhost:3000/get-file-images?project="+projectName)
+        $http.get("http://104.131.4.69:3000/get-file-images?project="+projectName)
           .success(function(data){
             res = data;
             defer.resolve(data);
@@ -47,7 +47,7 @@ angular.module('atServerService', [])
       if(projectName){
         var res = {};
         var defer = $q.defer();
-        $http.get("http://localhost:3000/get-build-assets?project="+projectName)
+        $http.get("http://104.131.4.69:3000/get-build-assets?project="+projectName)
           .success(function(data){
             res = data;
             defer.resolve(data);
@@ -59,7 +59,7 @@ angular.module('atServerService', [])
     this.getProjects = function() {
       var res = {};
       var defer = $q.defer();
-      $http.get("http://localhost:3000/get-projects")
+      $http.get("http://104.131.4.69:3000/get-projects")
         .success(function(data){
           res = data;
           defer.resolve(data);
@@ -69,7 +69,7 @@ angular.module('atServerService', [])
 
     this.saveFile = function(projectName ,fileName, jsonData, created, temp, objDB, existsHash) {
       if(projectName && fileName)
-        $http.post('http://localhost:3000/save-file', 
+        $http.post('http://104.131.4.69:3000/save-file', 
           {
             projectName: projectName,
             fileName: fileName,
@@ -88,7 +88,7 @@ angular.module('atServerService', [])
       if(projectName && fileName){
         var res = {};
         var defer = $q.defer();
-        $http.post('http://localhost:3000/get-file-data', 
+        $http.post('http://104.131.4.69:3000/get-file-data', 
            {
              projectName: projectName,
              fileName: fileName
@@ -103,7 +103,7 @@ angular.module('atServerService', [])
 
     this.createFile = function(projectName, fileName) {
       if(projectName && fileName)
-        $http.get("http://localhost:3000/create-file?project="+projectName+'&file='+fileName)
+        $http.get("http://104.131.4.69:3000/create-file?project="+projectName+'&file='+fileName)
         .success(function(data){
           this.message('File: '+fileName+' successfully created in '+projectName , 'info');
         }.bind(this));
@@ -111,14 +111,14 @@ angular.module('atServerService', [])
 
     this.createProject= function(projectName) {
       if(projectName)
-        $http.get("http://localhost:3000/create-project?project="+projectName)
+        $http.get("http://104.131.4.69:3000/create-project?project="+projectName)
         .success(function(data){
           this.message("Project: "+projectName+" successfully saved", "info");
         }.bind(this));
     }
 
     this.deleteFile = function(projectName, fileName){
-      $http.get("http://localhost:3000/delete-file?project="+projectName+'&file='+fileName)
+      $http.get("http://104.131.4.69:3000/delete-file?project="+projectName+'&file='+fileName)
         .success(function(data){
           this.message('File: '+fileName+' successfully deleted in '+projectName , 'info');
         }.bind(this));
