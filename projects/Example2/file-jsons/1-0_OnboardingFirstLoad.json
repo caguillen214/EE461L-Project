@@ -1,6 +1,6 @@
 {
   "Name": "1-0_OnboardingFirstLoad",
-  "URL": "projects/example/file-images/1-0_OnboardingFirstLoad.png",
+  "URL": "./projects/Example2/file-images/1-0_OnboardingFirstLoad.png",
   "Purpose": "Sign-up screen for users!",
   "Transitions": {
     "Build Ins": {},
@@ -47,6 +47,10 @@
       {
         "type": "Email",
         "key": "Email"
+      },
+      {
+        "type": "Button",
+        "key": "Password"
       }
     ],
     "output": [
@@ -54,6 +58,16 @@
         "key": "GetStartedSucces",
         "typeOut": "Pop-Up",
         "desc": "Shows successful entry of inputs"
+      },
+      {
+        "key": "EmailError",
+        "typeOut": "Message",
+        "desc": "Says if email failed"
+      },
+      {
+        "key": "PasswordError",
+        "typeOut": "Pop-Up",
+        "desc": "shows error"
       }
     ],
     "asset": []

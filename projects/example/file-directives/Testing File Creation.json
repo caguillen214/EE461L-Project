@@ -1,0 +1,52 @@
+{
+  "temp": {},
+  "created": {},
+  "objDB": {
+    "input": [
+      {
+        "type": "Text",
+        "restrictions": {
+          "Exact Text": null,
+          "Uppercase Only": null,
+          "Lowercase Only": null,
+          "Mixed Case": null,
+          "Alphabetic": null,
+          "Alphanumeric": null,
+          "Alphanumeric + Symbols": true,
+          "Symbols Only": null,
+          "Title Case": null,
+          "Regular Expression": "(\\d|\\w){0..5}"
+        },
+        "key": "INPUTKEY"
+      },
+      {
+        "type": "Button",
+        "key": "THISWORKS"
+      }
+    ],
+    "output": [
+      {
+        "key": "OUTPUTKEY",
+        "typeOut": "Pop-Up",
+        "desc": "Shows the text inputted"
+      }
+    ],
+    "action": [],
+    "asset": [],
+    "navigation": [],
+    "build": []
+  },
+  "existsHash": {
+    "input": {
+      "INPUTKEY": 0,
+      "THISWORKS": 1
+    },
+    "output": {
+      "OUTPUTKEY": 0
+    },
+    "action": {},
+    "asset": {},
+    "navigation": {},
+    "build": {}
+  }
+}
